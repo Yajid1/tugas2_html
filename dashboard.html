@@ -1,67 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Soal Pertama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Pertama :)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-
-    <div class="header">
-        Soal Pertama :)
-    </div>
-
-    <div class="content">
-
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <a href="1.html">Soal Pertama</a>
-            <a href="2.html">Soal Kedua</a>
-
-            <div class="search-box">
-                <h3>Search</h3>
-                <input type="text" placeholder="Search this web">
-                <button>GO!</button>
+    <div class="outer-bg">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <span class="label-10px">10px</span>
+                <span class="label-20px">20px</span>
+                <h1>Soal Pertama :)</h1>
+                <span class="label-color-code">#E2D800</span>
+                <span class="label-color-code-2">#032I52</span>
             </div>
-        </div>
+            <span class="label-20px-bottom">20px ↓</span>
+        </header>
 
-        <div class="main">
-            <div class="title">Tabel Sesuatu</div>
+        <div class="main-container">
+            <!-- Sidebar Left -->
+            <aside class="sidebar">
+                <div class="menu-section">
+                    <h3>Menu</h3>
+                    <ul class="menu-list">
+                        <li><a href="#soal-pertama">Soal Pertama</a></li>
+                        <li><a href="#soal-kedua">Soal Kedua</a></li>
+                    </ul>
+                </div>
 
-            <div class="table-box">
-                <table>
-                    <tr>
-                        <th>No</th>
-                        <th>Huruf</th>
-                        <th>Keterangan</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>A</td>
-                        <td>Pertama</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>B</td>
-                        <td>Kedua</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>C</td>
-                        <td>Ketiga</td>
-                    </tr>
+                <div class="search-section">
+                    <h3>Search</h3>
+                    <input type="text" placeholder="Search this web" class="search-input">
+                    <button class="search-btn">GO!</button>
+                </div>
+
+                <span class="sidebar-dimension">300px</span>
+            </aside>
+
+            <!-- Vertical Divider -->
+            <div class="vertical-line"></div>
+
+            <!-- Main Content -->
+            <main class="content">
+                <h2 class="table-title">Tabel Sesuatu</h2>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Huruf</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A</td>
+                            <td>Pertama</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>B</td>
+                            <td>Kedua</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>C</td>
+                            <td>Ketiga</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <div class="footer">
+
+                <div class="table-footer">
                     Data di atas adalah data fiktif
                 </div>
-            </div>
 
+                <span class="color-code">#4D83AA</span>
+                <span class="dimension-line">500px</span>
+            </main>
         </div>
 
+        <span class="bottom-dimension">800px</span>
     </div>
-
-</div>
-
 </body>
 </html>
