@@ -1,120 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Program Garis Hidup</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garis Hidup - Sistem Informasi ITENAS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="header-images">
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+        <img src="asset/gedung.jpeg" alt="Gedung Itenas" />
+      </div>
 
-<div class="container">
+      <div class="body-content">
+        <div class="sidebar">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="garis_hidup.html">Garis Hidup</a>
+        </div>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-image"></div>
-    </header>
+        <div class="content-area gh-area">
+          <h2 class="gh-title">Program Garis Hidup Tanggal Lahir</h2>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
+          <p class="gh-desc">
+            Program ini merupakan program untuk mendeskripsikan karakter anda
+            berdasarkan tanggal lahir yang kemudian hasilnya akan dikategorikan
+            sebagai Garis Lahir 1 sampai 9.
+          </p>
+          <p class="gh-desc">
+            Angka-angka dalam tanggal lahir Anda menyimpan banyak makna.
+            Jumlahkan sampai menjadi satu angka, lalu lihat artinya? (misalnya
+            Anda lahir tanggal 25 desember 1998, 25-12+1998 =
+            2+5+1+2+1+9+8+8=36=3+6=9)
+          </p>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Calculator</a></li>
-                <li><a href="#">Garis Hidup</a></li>
-            </ul>
-        </aside>
+          <p class="gh-highlight">Ayo Cari Tahu Kepribadian Kamu!</p>
 
-        <!-- CONTENT -->
-        <section class="content">
-            <h2>Program Garis Hidup Tanggal Lahir</h2>
-
-            <p>
-                Program ini merupakan program untuk mendeskripsikan karakter anda berdasarkan tanggal lahir yang kemudian hasilnya akan dikategorikan sebagai Garis Lahir 1 sampai 9.
-            </p>
-
-            <p>
-                Angka-angka dalam tanggal lahir Anda menyimpan banyak makna. Jumlahkan sampai menjadi satu angka, lalu lihat artinya!
-            </p>
-
-            <h3>Ayo Cari Tahu Kepribadian Kamu !</h3>
-            <hr>
-
-            <!-- FORM -->
-            <form id="formGarisHidup">
-                <div class="form-group">
-                    <label>Masukkan Tanggal Lahir Anda :</label>
-                    <select id="tanggal">
-                        <!-- 1 - 31 -->
-                        <script>
-                            for(let i=1; i<=31; i++){
-                                document.write(`<option value="${i}">${i}</option>`);
-                            }
-                        </script>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Masukkan Bulan Lahir Anda :</label>
-                    <select id="bulan">
-                        <option value="1">Januari</option>
-                        <option value="2">Februari</option>
-                        <option value="3">Maret</option>
-                        <option value="4">April</option>
-                        <option value="5">Mei</option>
-                        <option value="6">Juni</option>
-                        <option value="7">Juli</option>
-                        <option value="8">Agustus</option>
-                        <option value="9">September</option>
-                        <option value="10">Oktober</option>
-                        <option value="11">November</option>
-                        <option value="12">Desember</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Masukkan Tahun Lahir Anda :</label>
-                    <select id="tahun">
-                        <script>
-                            for(let i=1950; i<=2025; i++){
-                                document.write(`<option value="${i}">${i}</option>`);
-                            }
-                        </script>
-                    </select>
-                </div>
-
-                <div class="button-group">
-                    <button type="button" onclick="hitung()">Kirim</button>
-                    <button type="reset">Reset</button>
-                </div>
-            </form>
-
-            <!-- OUTPUT -->
-            <div class="output">
-                <h3>Output</h3>
-                <table>
-                    <tr><td>Tanggal</td><td id="outTanggal"></td></tr>
-                    <tr><td>Bulan</td><td id="outBulan"></td></tr>
-                    <tr><td>Tahun</td><td id="outTahun"></td></tr>
-                    <tr><td>Hasil 1</td><td id="hasil1"></td></tr>
-                    <tr><td>Hasil 2</td><td id="hasil2"></td></tr>
-                    <tr><td>Hasil Akhir</td><td id="hasilAkhir"></td></tr>
-                </table>
+          <div class="gh-form">
+            <div class="gh-form-group">
+              <label>Masukkan Tanggal Lahir Anda</label>
+              <input type="number" id="gh-tgl" min="1" max="31" />
             </div>
+            <div class="gh-form-group">
+              <label>Masukkan Bulan Lahir Anda :</label>
+              <select id="gh-bln" class="gh-select">
+                <option value="1">Januari</option>
+                <option value="2">Februari</option>
+                <option value="3">Maret</option>
+                <option value="4">April</option>
+                <option value="5">Mei</option>
+                <option value="6">Juni</option>
+                <option value="7">Juli</option>
+                <option value="8">Agustus</option>
+                <option value="9">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">Desember</option>
+              </select>
+            </div>
+            <div class="gh-form-group">
+              <label>Masukkan Tahun Lahir Anda</label>
+              <input type="number" id="gh-thn" min="1900" max="2100" />
+            </div>
+            <div class="gh-buttons">
+              <button type="button" id="btn-kirim-gh" class="btn-black">
+                kirim
+              </button>
+              <button type="button" id="btn-reset-gh" class="btn-black">
+                reset
+              </button>
+            </div>
+          </div>
 
-        </section>
+          <div
+            class="gh-output-section"
+            id="gh-output-section"
+            style="display: none"
+          >
+            <h3 style="font-size: 16px; margin-bottom: 8px">Output</h3>
+            <table class="gh-table">
+              <tr>
+                <td>Tanggal</td>
+                <td><input type="text" id="out-tgl" readonly /></td>
+              </tr>
+              <tr>
+                <td>Bulan</td>
+                <td><input type="text" id="out-bln" readonly /></td>
+              </tr>
+              <tr>
+                <td>Tahun</td>
+                <td><input type="text" id="out-thn" readonly /></td>
+              </tr>
+              <tr>
+                <td>Hasil 1</td>
+                <td><input type="text" id="out-h1" readonly /></td>
+              </tr>
+              <tr>
+                <td>Hasil 2</td>
+                <td><input type="text" id="out-h2" readonly /></td>
+              </tr>
+              <tr>
+                <td>Hasil Akhir</td>
+                <td><input type="text" id="out-hakhir" readonly /></td>
+              </tr>
+            </table>
+
+            <div class="gh-result-text">
+              <h3 class="gh-result-title">
+                Tanggal Lahir Anda Berada Pada Garis Hidup
+                <span id="out-num"></span>
+              </h3>
+              <p id="gh-result-desc" class="gh-result-desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        162023003<br />
+        Sistem Informasi | ITENAS 2024
+      </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>280224</p>
-        <p>Sistem Informasi | ITENAS 2024</p>
-    </footer>
-
-</div>
-
-<script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
