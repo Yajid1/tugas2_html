@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>162023019 Yajid Salman</h1>
+
+<table id="tabel"></table>
+
+<script>
+    const jumlahBaris = 5;
+    const jumlahKolom = 5;
+
+
+    const warnaKelas = {
+        1: "aktif-1", 
+        2: "aktif-2",  
+        3: "aktif-3", 
+        4: "aktif-4",  
+        5: "aktif-5",  
+    };
+
+    const dataTabel = [];
+    for (let i = 1; i <= jumlahBaris; i++) {
+        dataTabel[i] = [];
+        for (let j = 1; j <= jumlahKolom; j++) {
+            dataTabel[i][j] = `${i},${j}`;
+        }
+    }
+
+    const tabel = document.getElementById("tabel");
+
+    for (let i = 1; i <= jumlahBaris; i++) {
+        const tr = document.createElement("tr");
+
+        for (let j = 1; j <= jumlahKolom; j++) {
+            const td = document.createElement("td");
+            td.textContent = dataTabel[i][j];
+            td.dataset.kelasAktif = warnaKelas[i];
+
+            td.addEventListener("mouseover", function () {
+                this.classList.add(this.dataset.kelasAktif);
+            });
+
+            td.addEventListener("mouseout", function () {
+                this.classList.remove(this.dataset.kelasAktif);
+            });
+
+            tr.appendChild(td);
+        }
+
+        tabel.appendChild(tr);
+    }
+</script>
+
+</body>
+</html>
